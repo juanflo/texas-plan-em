@@ -1,0 +1,21 @@
+.component-users {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    width: 300px;
+    background: rgb(232, 232, 232);
+    border-radius: 5px;
+    box-shadow: 0 0 54px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    z-index: 2;
+
+    &-icon {
+        font-size: 30px;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    &-list-container {
+        padding: 0 10px;
+    }
+}

@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:500');
+@import url('https://fonts.googleapis.com/css?family=Maiden+Orange');
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  font-family: 'Quicksand', Helvetica, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+}
+
+$red: #cc0000;
+$red-light: #f08080;
+
+$gray: #888888;
+$gray-light: #cccccc;
+
+$shadow-dark: rgba(0, 0, 0, 0.35);
+$shadow-light: rgba(0, 0, 0, 0.08);
+
+$table-color: #dc5a44;
+$stage-color-start: #dadad3;
+$stage-color-end: white;
+$card-face-down-start-color: #992e2a;
+$card-face-down-end-color: #b5534f;
+$card-font-color: #992e2a;
+$card-holder-color: #47403f;
+
+
+h1 {
+  margin: 0;
+  padding: 0.25rem 0;
+  text-align: center;
+  font-family: 'Maiden Orange', cursive;
+  letter-spacing: 2px;
+  font-weight: normal;
+  font-size: 4.5rem;
+  color: white;
+  text-shadow: 1px 1px 3px $shadow-dark;
+}
+
+.font-inherit,
+.font-inherit * {
+  font-family: inherit !important;
+}
+
+.text {
+  color: white;
+  font-size: 24px;
+  text-shadow: 1px 1px 3px $shadow-dark;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+.create-session {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to bottom, $stage-color-start, $stage-color-end);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.card {
+  background-color: rgb(255, 255, 255); 
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 6px, rgba(0, 0, 0, 0.12) 0px 1px 4px; 
+  border-radius: 2px; 
+  z-index: 1;
+}
+
+.create-session-outer {
+  width: 500px;
+  height: 800px;
+}
+
+.create-session-inner {
+  width: 400px;
+  // min-height: 300px;
+  position: absolute;
+  top: -100px;
+  margin: auto auto;
+  right: 0;
+  left: 0;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+button#start-session,
+button#join-session {
+  margin: 15px auto 0;
+  display: block;
+}
+
+.radio-group {
+  margin: 10px 0;
+}
+
+.radio-group > div {
+  margin-bottom: 15px;
+}
+
+.top {
+  height: 50%;
+  background: $card-holder-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottom {
+  position: relative;
+}
+
+.start-session {
+  background: linear-gradient(to bottom, $stage-color-start, $stage-color-end);
+  display: inline-block;
+  width: 70%;
+  height: 100%;
+
+  @media(max-width: 768px) {
+    width: 100%;
+    height: calc(100% - 100px);
+  }
+}
+
+
+@import "scss/button";
+@import "scss/game";
+@import "scss/planning-card";
+@import "scss/planning-card-holder";
+@import "scss/users/users";
+@import "scss/users/user-list";
+@import "scss/users/user-item";
+@import "scss/waiting";

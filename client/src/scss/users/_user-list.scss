@@ -1,0 +1,23 @@
+.component-user-list {
+    padding: 0 0 10px;
+
+    &-title {
+        background-color: $red-light !important;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+
+        span {
+            color: #fff;
+        }
+    }
+
+    &-list {
+        padding: 0 !important;
+
+        > div:last-child > .component-user-item {
+            border-bottom-left-radius: 5px !important;
+            border-bottom-right-radius: 5px !important;
+        }
+    }
+    
+}
